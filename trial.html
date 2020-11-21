@@ -126,6 +126,9 @@
 		var ctype= $('#inputGroupSelect03').val();
 		var luggage= $('#luggage').val();
 					
+			
+			if(pick!='Current location...'&&drop!='Destination...'&&ctype!='Choose...')
+			{
 			$.ajax({
 				url: 'ajax.php',
 				method:'GET',
@@ -147,7 +150,8 @@
 				error:function(){
 					alert("error");
 				}
-			});
+			}); 
+		}
 	});
 
 </script>
